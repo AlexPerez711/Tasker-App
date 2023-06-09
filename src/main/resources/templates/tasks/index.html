@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Index</title>
+</head>
+<body>
+
+<h1>Tasks Index Page </h1>
+
+<th:block>
+    <ul th:each="task : ${taskList}">
+        <li th:text="'Title: ' + ${task.taskTitle}"></li>
+        <li th:text="'Description: ' + ${task.taskDescription}"></li>
+    </ul>
+</th:block>
+
+</body>
+</html>

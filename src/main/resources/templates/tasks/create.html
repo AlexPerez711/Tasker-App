@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Index</title>
+</head>
+<body>
+<form th:action="@{/tasks/create}" th:method="post" th:object="${task}">
+  Title:
+  <input th:field="*{taskTitle}" />
+  <br />
+  Description:
+  <input th:field="*{taskDescription}" />
+  <br />
+  <input type="submit" />
+</form>
+
+
+</body>
+</html>
